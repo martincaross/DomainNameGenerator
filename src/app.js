@@ -7,21 +7,19 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let who = ['The dog', 'My grandma', 'The mailman', 'My bird'];
-  let action = ['ate', 'peed', 'crushed', 'broke'];
-  let what = ['my homework', 'my phone', 'the car'];
-  let when = ['before the class', 'when I was sleeping', 'when I was sleeping', 'during my lunch', 'while I was praying'];
+  let pronoun = ['the', 'our'];
+  let adj = ['great', 'big'];
+  let noun = ['jogger', 'racoon'];
 
-  function ExcuseGenerator(){
-    let randomWho = who[Math.floor(Math.random() * who.length)];
-    let randomAction = action[Math.floor(Math.random() * action.length)];
-    let randomWhat = what[Math.floor(Math.random() * what.length)];
-    let randomWhen = when[Math.floor(Math.random() * when.length)];
-
-    let excusa = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}`;
-    document.getElementById("excuse").innerHTML= excusa
+  function DomainGenerator(){
+    let randPronoun = pronoun[Math.floor(Math.random() * pronoun.length)];
+    let randomAdj = adj[Math.floor(Math.random() * adj.length)];
+    let randomNoun = noun[Math.floor(Math.random() * noun.length)];
+    
+    let dom = `${randPronoun}${randomAdj}${randomNoun}.com`;
+    document.getElementById("dom").innerHTML= dom
   }
   
-  ExcuseGenerator();
+  DomainGenerator();
   
 };
